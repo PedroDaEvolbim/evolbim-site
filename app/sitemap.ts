@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
     "/quem-somos",
+    "/servicos",
     "/como-trabalhamos",
     "/contato",
     "/servicos/projetos-de-engenharia",
@@ -18,8 +19,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
+
     lastModified: new Date(),
+
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : route.startsWith("/servicos/") ? 0.8 : 0.7,
+
+    priority:
+      route === ""
+        ? 1
+        : route === "/servicos"
+          ? 0.9
+          : route.startsWith("/servicos/")
+            ? 0.8
+            : 0.7,
   }));
 }

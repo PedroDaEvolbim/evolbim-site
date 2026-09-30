@@ -12,8 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://evolbimengenharia.com.br";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://evolbimengenharia.com.br"),
+  metadataBase: new URL(siteUrl),
 
   title: {
     default: "Evolbim Engenharia | Engenharia, CAD, BIM e Gestão",
@@ -28,10 +30,15 @@ export const metadata: Metadata = {
   keywords: [
     "Evolbim Engenharia",
     "engenharia em Jataí",
+    "engenheiro civil em Jataí",
+    "empresa de engenharia em Jataí",
     "engenharia em Goiás",
+    "projetos de engenharia em Jataí",
     "projetos de engenharia",
-    "CAD",
+    "projetos CAD",
+    "desenho técnico CAD",
     "BIM",
+    "modelagem BIM",
     "compatibilização de projetos",
     "planejamento de obras",
     "orçamento de obras",
@@ -44,19 +51,19 @@ export const metadata: Metadata = {
   publisher: "Evolbim Engenharia",
 
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
 
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://evolbimengenharia.com.br",
+    url: siteUrl,
     siteName: "Evolbim Engenharia",
 
     title: "Evolbim Engenharia | Engenharia, CAD, BIM e Gestão",
 
     description:
-      "Engenharia, CAD, BIM, planejamento e gestão integrados para transformar projetos em soluções executáveis.",
+      "Projetos de engenharia, CAD, BIM, planejamento, orçamento e acompanhamento técnico em Jataí, Goiás.",
 
     images: [
       {
@@ -74,7 +81,7 @@ export const metadata: Metadata = {
     title: "Evolbim Engenharia | Engenharia, CAD, BIM e Gestão",
 
     description:
-      "Engenharia, CAD, BIM, planejamento e gestão integrados para transformar projetos em soluções executáveis.",
+      "Projetos de engenharia, CAD, BIM, planejamento, orçamento e acompanhamento técnico em Jataí, Goiás.",
 
     images: ["/images/brand/og-evolbim.png"],
   },
@@ -82,15 +89,22 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   },
 
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
+
+  category: "engineering",
 };
 
 export default function RootLayout({
