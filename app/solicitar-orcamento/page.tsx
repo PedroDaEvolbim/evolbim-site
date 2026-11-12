@@ -31,7 +31,6 @@ export default function SolicitarOrcamento() {
           <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
           <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
           <a className="cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA</a>
-          <div className="availability">5 vagas disponíveis</div>
           <div className="region">⌖ &nbsp; Atendimento em Jataí-GO e Região</div>
         </div>
       </section>
