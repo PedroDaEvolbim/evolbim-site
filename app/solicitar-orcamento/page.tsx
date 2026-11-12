@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -9,18 +10,12 @@ function CursorHalo() {
     const move = (event: PointerEvent) => { if (event.pointerType !== "mouse") return; setPosition({ x: event.clientX, y: event.clientY }); setVisible(true); setActive(Boolean((event.target as HTMLElement).closest("a,button"))); };
     const hide = () => setVisible(false);
     window.addEventListener("pointermove", move);
-    window.addEventListener("mousemove", (event) => { setPosition({ x: event.clientX, y: event.clientY }); setVisible(true); setActive(Boolean((event.target as HTMLElement).closest("a,button"))); });
     document.addEventListener("pointerleave", hide);
     return () => { window.removeEventListener("pointermove", move); document.removeEventListener("pointerleave", hide); };
   }, []);
   return <div aria-hidden="true" className={`cursor-halo ${visible ? "visible" : ""} ${active ? "active" : ""}`} style={{ left: position.x, top: position.y }}><span /></div>;
 }
 
-
-export const metadata = {
-  title: "Agende sua reunião gratuita | Evolbim Engenharia",
-  description: "Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em Jataí-GO e região.",
-};
 
 export default function SolicitarOrcamento() {
   return (
@@ -33,9 +28,9 @@ export default function SolicitarOrcamento() {
       <section className="hero">
         <div className="copy">
           
-          <h1>Seu projeto de engenharia com mais <em>segurança e planejamento.</em></h1>
-          <p>Da concepção à execução, desenvolvemos soluções técnicas para construir com mais previsibilidade e controle.</p>
-          <a className="cta" href="#orcamento">Agende sua reunião gratuita <span aria-hidden="true">→</span></a>
+          <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
+          <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
+          <a className="cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA</a>
           <div className="availability">5 vagas disponíveis</div>
           <div className="region">⌖ &nbsp; Atendimento em Jataí-GO e Região</div>
         </div>
@@ -53,19 +48,19 @@ export default function SolicitarOrcamento() {
         .cursor-halo{position:fixed;z-index:2147483647;width:46px;height:46px;border:2px solid #12c6bf;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.8);opacity:0;transition:opacity .18s,transform .2s;display:grid;place-items:center;box-shadow:0 0 0 3px #12c6bf22,0 0 18px #12c6bf66}.cursor-halo span{width:4px;height:4px;background:#12c6bf;border-radius:50%}.cursor-halo.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}.cursor-halo.active{transform:translate(-50%,-50%) scale(1.45);background:#12c6bf18}@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-halo{display:none!important}}
         *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
         .landing{font-family:Arial,Helvetica,sans-serif;background:#071624;color:#fff}
-        .top{height:96px;max-width:1200px;margin:auto;padding:5px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
-        .logo{width:150px;height:78px;object-fit:contain}
+        .top{height:86px;max-width:1140px;margin:auto;padding:5px 18px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
+        .logo{width:145px;height:72px;object-fit:contain}
         .descriptor{display:none}.reading{font-size:14px;font-weight:600;letter-spacing:.5px;white-space:nowrap}
-        .hero{min-height:540px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,19,32,.98) 0%,rgba(5,19,32,.88) 31%,rgba(5,19,32,.5) 58%,rgba(5,19,32,.12) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
-        .copy{max-width:1200px;width:100%;margin:auto;padding:52px 24px 44px}
-        .copy>*{max-width:490px}
+         .hero{min-height:540px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,19,32,.98) 0%,rgba(5,19,32,.88) 34%,rgba(5,19,32,.45) 62%,rgba(5,19,32,.10) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
+        .copy{max-width:1140px;width:100%;margin:auto;padding:52px 18px 44px}
+        .copy>*{max-width:535px}
         .accent{display:none}
-        h1{font-size:clamp(34px,3.8vw,49px);font-weight:400;line-height:1.12;letter-spacing:-1.2px;margin:0 0 22px}
+        h1{font-size:clamp(37px,4vw,53px);font-weight:400;line-height:1.12;letter-spacing:-1.2px;margin:0 0 22px}
         h1 em{font-style:normal;font-weight:700;color:#12c6bf}
-        .copy p{font-size:14px;line-height:1.55;margin:0 0 30px;max-width:470px}
-        .cta{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-width:290px;padding:17px 22px;background:#12c6bf;border-radius:24px 0 24px 0;color:#041d24;text-decoration:none;font-weight:700;font-size:15px;transition:background .2s,transform .2s}
+        .copy p{font-size:14px;line-height:1.55;margin:0 0 32px;max-width:515px}
+        .cta{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-width:360px;padding:21px 27px;background:#12c6bf;border-radius:28px 0 28px 0;color:#041d24;text-decoration:none;font-weight:700;font-size:15px;transition:background .2s,transform .2s}
         .cta:hover{background:#4be0d8;transform:translateY(-2px)}.cta span{font-size:20px}
-        .availability{font-size:12px;margin-top:12px;margin-bottom:7px;color:#cbd5d9}
+        .availability{font-size:12px;margin-top:16px;margin-bottom:7px;color:#cbd5d9}
         .region{font-size:12px;color:#cbd5d9;padding:0;border:0}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
