@@ -1,4 +1,20 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+function CursorHalo() {
+  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [visible, setVisible] = useState(false);
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    const move = (event: PointerEvent) => { if (event.pointerType !== "mouse") return; setPosition({ x: event.clientX, y: event.clientY }); setVisible(true); setActive(Boolean((event.target as HTMLElement).closest("a,button"))); };
+    const hide = () => setVisible(false);
+    window.addEventListener("pointermove", move);
+    document.addEventListener("pointerleave", hide);
+    return () => { window.removeEventListener("pointermove", move); document.removeEventListener("pointerleave", hide); };
+  }, []);
+  return <div aria-hidden="true" className={`cursor-halo ${visible ? "visible" : ""} ${active ? "active" : ""}`} style={{ left: position.x, top: position.y }}><span /></div>;
+}
+
 
 export const metadata = {
   title: "Solicite seu orçamento | Evolbim Engenharia",
@@ -8,6 +24,7 @@ export const metadata = {
 export default function SolicitarOrcamento() {
   return (
     <main className="landing">
+      <CursorHalo />
       <header className="top">
         <Image src="/images/brand/logo-light.png" alt="Evolbim Engenharia" width={240} height={85} className="logo" priority />
         <span className="reading">LEITURA DE 2 MINUTOS</span>
@@ -32,6 +49,7 @@ export default function SolicitarOrcamento() {
       </section>
       <footer>© {new Date().getFullYear()} Evolbim Engenharia</footer>
       <style>{`
+        .cursor-halo{position:fixed;z-index:9999;width:34px;height:34px;border:1px solid #12c6bf;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.8);opacity:0;transition:opacity .18s,transform .2s;display:grid;place-items:center;box-shadow:0 0 10px #12c6bf33}.cursor-halo span{width:4px;height:4px;background:#12c6bf;border-radius:50%}.cursor-halo.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}.cursor-halo.active{transform:translate(-50%,-50%) scale(1.45);background:#12c6bf18}@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-halo{display:none!important}}
         *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
         .landing{font-family:Arial,Helvetica,sans-serif;background:#071624;color:#fff}
         .top{height:68px;max-width:1200px;margin:auto;padding:5px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
