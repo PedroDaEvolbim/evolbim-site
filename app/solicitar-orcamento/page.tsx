@@ -10,14 +10,13 @@ export default function SolicitarOrcamento() {
     <main className="landing">
       <header className="top">
         <Image src="/images/brand/logo-light.png" alt="Evolbim Engenharia" width={240} height={85} className="logo" priority />
-        <span className="descriptor">ENGENHARIA EM<br />PROJETOS E OBRAS</span>
-        <span className="reading">◷ &nbsp; LEITURA DE 2 MINUTOS</span>
+        <span className="reading">LEITURA DE 2 MINUTOS</span>
       </header>
       <section className="hero">
         <div className="copy">
-          <span className="accent" />
-          <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
-          <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
+          
+          <h1>Seu projeto de engenharia com mais <em>segurança e planejamento.</em></h1>
+          <p>Da concepção à execução, desenvolvemos soluções técnicas para construir com mais previsibilidade e controle.</p>
           <a className="cta" href="#orcamento">Solicite seu orçamento <span aria-hidden="true">→</span></a>
           <div className="availability">5 vagas disponíveis</div>
           <div className="region">⌖ &nbsp; Atendimento em Jataí-GO e Região</div>
@@ -34,22 +33,26 @@ export default function SolicitarOrcamento() {
       <footer>© {new Date().getFullYear()} Evolbim Engenharia</footer>
       <style>{`
         *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
-        .landing{font-family:Arial,Helvetica,sans-serif;background:#061923;color:#fff}
-        .top{height:82px;max-width:1450px;margin:auto;padding:10px 6%;display:flex;align-items:center;gap:34px;position:relative;z-index:2}
-        .logo{width:135px;height:auto;object-fit:contain}.descriptor{border-left:1px solid #8da1a7;padding-left:32px;letter-spacing:4px;font-size:13px;line-height:1.7;font-weight:700}
-        .reading{margin-left:auto;font-size:13px;letter-spacing:1.5px;white-space:nowrap}
-        .hero{min-height:510px;display:flex;align-items:center;background:linear-gradient(90deg,#061923 0%,rgba(6,25,35,.98) 28%,rgba(6,25,35,.78) 52%,rgba(6,25,35,.15) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
-        .copy{max-width:1450px;width:100%;margin:auto;padding:20px 6% 35px}.copy>*{max-width:560px}
-        .accent{display:block;width:68px;height:7px;border-radius:9px;background:#10b5b0;margin-bottom:26px}
-        h1{font-size:clamp(30px,3.1vw,46px);line-height:1.07;letter-spacing:-1.8px;margin:0 0 18px;font-weight:800}
-        h1 em{font-style:normal;color:#10d8d0}.copy p{font-size:16px;line-height:1.5;margin:0 0 22px}
-        .cta{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;padding:15px 22px;background:#11c9c2;border-radius:14px;color:#041d24;text-decoration:none;font-weight:800;font-size:17px;transition:background .2s,transform .2s}
-        .cta:hover{background:#44e6df;transform:translateY(-2px)}.cta span{font-size:26px}
-        .availability{font-size:16px;margin-top:14px;margin-bottom:14px}.region{padding-top:19px;border-top:1px solid #51636a;font-size:15px}
-        .details{background:#f5f8f8;color:#1c333b;padding:90px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}.eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
+        .landing{font-family:Arial,Helvetica,sans-serif;background:#071624;color:#fff}
+        .top{height:68px;max-width:1200px;margin:auto;padding:5px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
+        .logo{width:118px;height:58px;object-fit:contain}
+        .descriptor{display:none}.reading{font-size:14px;font-weight:600;letter-spacing:.5px;white-space:nowrap}
+        .hero{min-height:540px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,19,32,.98) 0%,rgba(5,19,32,.88) 31%,rgba(5,19,32,.5) 58%,rgba(5,19,32,.12) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
+        .copy{max-width:1200px;width:100%;margin:auto;padding:52px 24px 44px}
+        .copy>*{max-width:490px}
+        .accent{display:none}
+        h1{font-size:clamp(34px,3.8vw,49px);font-weight:400;line-height:1.12;letter-spacing:-1.2px;margin:0 0 22px}
+        h1 em{font-style:normal;font-weight:700;color:#12c6bf}
+        .copy p{font-size:14px;line-height:1.55;margin:0 0 30px;max-width:470px}
+        .cta{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-width:290px;padding:17px 22px;background:#12c6bf;border-radius:24px 0 24px 0;color:#041d24;text-decoration:none;font-weight:700;font-size:15px;transition:background .2s,transform .2s}
+        .cta:hover{background:#4be0d8;transform:translateY(-2px)}.cta span{font-size:20px}
+        .availability{font-size:12px;margin-top:12px;margin-bottom:7px;color:#cbd5d9}
+        .region{font-size:12px;color:#cbd5d9;padding:0;border:0}
+        .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
+        .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
         footer{text-align:center;padding:30px;font-size:13px;color:#adc1c4}
-        @media(max-width:750px){.top{height:88px;padding:15px 6%;gap:12px}.logo{width:145px}.descriptor{display:none}.reading{font-size:10px;letter-spacing:0}.hero{min-height:580px;background:linear-gradient(90deg,rgba(6,25,35,.97),rgba(6,25,35,.76)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.copy{padding:45px 6% 60px}h1{letter-spacing:-1px}.copy p{font-size:16px}.cta{font-size:17px;gap:20px;padding:18px 20px}.details{padding:65px 6%}}
+        @media(max-width:750px){.top{height:68px;padding:5px 18px}.logo{width:100px;height:55px}.reading{font-size:10px}.hero{min-height:600px;background:linear-gradient(90deg,rgba(5,19,32,.96),rgba(5,19,32,.72)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.copy{padding:45px 22px}.copy>*{max-width:460px}h1{font-size:clamp(34px,8vw,44px)}.copy p{font-size:14px}.cta{min-width:0;width:100%;max-width:340px}.details{padding:65px 6%}}
       `}</style>
     </main>
   );
