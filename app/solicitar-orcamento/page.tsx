@@ -40,9 +40,9 @@ export default function SolicitarOrcamento() {
           <h2 id="audience-title">A <strong>Evolbim Engenharia</strong> é para você que...</h2>
           <div className="audience-grid">
             {[
-              ["01", "Quer construir ou reformar", "Mas ainda não sabe por onde começar ou quais etapas são necessárias."],
-              ["02", "Precisa de projetos de engenharia", "E busca soluções técnicas para construir com segurança e organização."],
-              ["03", "Quer evitar custos inesperados", "E reduzir riscos de retrabalho, desperdícios e incompatibilidades."],
+              ["01", "Precisa de projetos de engenharia", "E busca soluções técnicas para construir com segurança e organização."],
+              ["02", "Quer evitar custos inesperados", "E reduzir riscos de retrabalho, desperdícios e incompatibilidades."],
+              ["03", "Quer construir ou reformar", "Mas ainda não sabe por onde começar ou quais etapas são necessárias."],
               ["04", "Precisa organizar seu empreendimento", "E deseja integrar projetos, profissionais, orçamento e execução."],
               ["05", "Busca acompanhamento técnico", "Para acompanhar decisões e ter mais controle sobre a evolução da obra."]
             ].map(([number, title, description]) => (
