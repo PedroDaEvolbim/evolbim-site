@@ -31,7 +31,7 @@ export default function SolicitarOrcamento() {
           <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
           <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
           <a className="cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA</a>
-          <div className="region">⌖ &nbsp; Atendimento em Jataí-GO e Região</div>
+          <div className="region"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Atendimento em Jataí-GO e Região</div>
         </div>
       </section>
       <section className="details" id="orcamento">
@@ -60,7 +60,7 @@ export default function SolicitarOrcamento() {
         .cta{display:inline-flex;align-items:center;justify-content:center;gap:26px;min-width:360px;padding:21px 27px;background:#12c6bf;border-radius:28px 0 28px 0;color:#041d24;text-decoration:none;font-weight:700;font-size:15px;transition:background .2s,transform .2s}
         .cta:hover{background:#4be0d8;transform:translateY(-2px)}.cta span{font-size:20px}
         .availability{font-size:12px;margin-top:16px;margin-bottom:7px;color:#cbd5d9}
-        .region{font-size:12px;color:#cbd5d9;padding:0;border:0}
+        .region{font-size:12px;color:#cbd5d9;padding:0;border:0;display:flex;align-items:center;gap:7px}.region svg{color:#12c6bf;flex-shrink:0}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
