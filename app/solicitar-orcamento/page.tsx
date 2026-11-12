@@ -9,6 +9,7 @@ function CursorHalo() {
     const move = (event: PointerEvent) => { if (event.pointerType !== "mouse") return; setPosition({ x: event.clientX, y: event.clientY }); setVisible(true); setActive(Boolean((event.target as HTMLElement).closest("a,button"))); };
     const hide = () => setVisible(false);
     window.addEventListener("pointermove", move);
+    window.addEventListener("mousemove", (event) => { setPosition({ x: event.clientX, y: event.clientY }); setVisible(true); setActive(Boolean((event.target as HTMLElement).closest("a,button"))); });
     document.addEventListener("pointerleave", hide);
     return () => { window.removeEventListener("pointermove", move); document.removeEventListener("pointerleave", hide); };
   }, []);
@@ -49,11 +50,11 @@ export default function SolicitarOrcamento() {
       </section>
       <footer>© {new Date().getFullYear()} Evolbim Engenharia</footer>
       <style>{`
-        .cursor-halo{position:fixed;z-index:9999;width:34px;height:34px;border:1px solid #12c6bf;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.8);opacity:0;transition:opacity .18s,transform .2s;display:grid;place-items:center;box-shadow:0 0 10px #12c6bf33}.cursor-halo span{width:4px;height:4px;background:#12c6bf;border-radius:50%}.cursor-halo.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}.cursor-halo.active{transform:translate(-50%,-50%) scale(1.45);background:#12c6bf18}@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-halo{display:none!important}}
+        .cursor-halo{position:fixed;z-index:2147483647;width:46px;height:46px;border:2px solid #12c6bf;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.8);opacity:0;transition:opacity .18s,transform .2s;display:grid;place-items:center;box-shadow:0 0 0 3px #12c6bf22,0 0 18px #12c6bf66}.cursor-halo span{width:4px;height:4px;background:#12c6bf;border-radius:50%}.cursor-halo.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}.cursor-halo.active{transform:translate(-50%,-50%) scale(1.45);background:#12c6bf18}@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-halo{display:none!important}}
         *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
         .landing{font-family:Arial,Helvetica,sans-serif;background:#071624;color:#fff}
-        .top{height:68px;max-width:1200px;margin:auto;padding:5px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
-        .logo{width:118px;height:58px;object-fit:contain}
+        .top{height:96px;max-width:1200px;margin:auto;padding:5px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
+        .logo{width:150px;height:78px;object-fit:contain}
         .descriptor{display:none}.reading{font-size:14px;font-weight:600;letter-spacing:.5px;white-space:nowrap}
         .hero{min-height:540px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(5,19,32,.98) 0%,rgba(5,19,32,.88) 31%,rgba(5,19,32,.5) 58%,rgba(5,19,32,.12) 100%),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat}
         .copy{max-width:1200px;width:100%;margin:auto;padding:52px 24px 44px}
@@ -70,7 +71,7 @@ export default function SolicitarOrcamento() {
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
         footer{text-align:center;padding:30px;font-size:13px;color:#adc1c4}
-        @media(max-width:750px){.top{height:68px;padding:5px 18px}.logo{width:100px;height:55px}.reading{font-size:10px}.hero{min-height:600px;background:linear-gradient(90deg,rgba(5,19,32,.96),rgba(5,19,32,.72)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.copy{padding:45px 22px}.copy>*{max-width:460px}h1{font-size:clamp(34px,8vw,44px)}.copy p{font-size:14px}.cta{min-width:0;width:100%;max-width:340px}.details{padding:65px 6%}}
+        @media(max-width:750px){.top{height:82px;padding:5px 18px}.logo{width:120px;height:70px}.reading{font-size:10px}.hero{min-height:600px;background:linear-gradient(90deg,rgba(5,19,32,.96),rgba(5,19,32,.72)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.copy{padding:45px 22px}.copy>*{max-width:460px}h1{font-size:clamp(34px,8vw,44px)}.copy p{font-size:14px}.cta{min-width:0;width:100%;max-width:340px}.details{padding:65px 6%}}
       `}</style>
     </main>
   );
