@@ -18,7 +18,7 @@ function CursorHalo() {
 
 
 export const metadata = {
-  title: "Solicite seu orçamento | Evolbim Engenharia",
+  title: "Agende sua reunião gratuita | Evolbim Engenharia",
   description: "Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em Jataí-GO e região.",
 };
 
@@ -35,7 +35,7 @@ export default function SolicitarOrcamento() {
           
           <h1>Seu projeto de engenharia com mais <em>segurança e planejamento.</em></h1>
           <p>Da concepção à execução, desenvolvemos soluções técnicas para construir com mais previsibilidade e controle.</p>
-          <a className="cta" href="#orcamento">Solicite seu orçamento <span aria-hidden="true">→</span></a>
+          <a className="cta" href="#orcamento">Agende sua reunião gratuita <span aria-hidden="true">→</span></a>
           <div className="availability">5 vagas disponíveis</div>
           <div className="region">⌖ &nbsp; Atendimento em Jataí-GO e Região</div>
         </div>
@@ -45,7 +45,7 @@ export default function SolicitarOrcamento() {
           <p className="eyebrow">EVOLBIM ENGENHARIA</p>
           <h2>Seu projeto merece planejamento desde o início.</h2>
           <p>Conte para nossa equipe o que você pretende desenvolver. Vamos entender sua necessidade e orientar os próximos passos.</p>
-          <a className="cta" href="mailto:contato@evolbimengenharia.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20or%C3%A7amento%20-%20Site%20Evolbim">Solicite seu orçamento <span aria-hidden="true">→</span></a>
+          <a className="cta" href="mailto:contato@evolbimengenharia.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20or%C3%A7amento%20-%20Site%20Evolbim">Agende sua reunião gratuita <span aria-hidden="true">→</span></a>
         </div>
       </section>
       <footer>© {new Date().getFullYear()} Evolbim Engenharia</footer>
