@@ -34,6 +34,27 @@ export default function SolicitarOrcamento() {
           <div className="region"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Atendimento em Jataí-GO e Região</div>
         </div>
       </section>
+      <section className="audience" aria-labelledby="audience-title">
+        <div className="audience-inner">
+          <span className="audience-label">É PARA VOCÊ</span>
+          <h2 id="audience-title">A <strong>Evolbim Engenharia</strong> é para você que...</h2>
+          <div className="audience-grid">
+            {[
+              ["01", "Quer construir ou reformar", "Mas ainda não sabe por onde começar ou quais etapas são necessárias."],
+              ["02", "Precisa de projetos de engenharia", "E busca soluções técnicas para construir com segurança e organização."],
+              ["03", "Quer evitar custos inesperados", "E reduzir riscos de retrabalho, desperdícios e incompatibilidades."],
+              ["04", "Precisa organizar seu empreendimento", "E deseja integrar projetos, profissionais, orçamento e execução."],
+              ["05", "Busca acompanhamento técnico", "Para acompanhar decisões e ter mais controle sobre a evolução da obra."]
+            ].map(([number, title, description]) => (
+              <article className="audience-card" key={number}>
+                <span className="audience-number">{number}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="details" id="orcamento">
         <div className="details-inner">
           <p className="eyebrow">EVOLBIM ENGENHARIA</p>
@@ -61,6 +82,19 @@ export default function SolicitarOrcamento() {
         .cta:hover{background:#4be0d8;transform:translateY(-2px)}.cta span{font-size:20px}
         .availability{font-size:12px;margin-top:16px;margin-bottom:7px;color:#cbd5d9}
         .region{font-size:12px;color:#cbd5d9;padding:0;border:0;margin-top:22px;display:flex;align-items:center;gap:7px}.region svg{color:#12c6bf;flex-shrink:0}
+        .audience{background:#061526;padding:88px 24px 100px;color:#f5f8fa}
+        .audience-inner{max-width:1120px;margin:0 auto;text-align:center}
+        .audience-label{display:inline-block;border:1px solid #1b5863;border-radius:30px;padding:8px 20px;color:#16c7c0;background:#0a2638;font-size:11px;font-weight:700;letter-spacing:1.6px}
+        .audience h2{font-size:clamp(26px,3vw,38px);font-weight:400;line-height:1.25;margin:22px 0 40px;color:#c6d3dc}
+        .audience h2 strong{color:#fff;font-weight:700}
+        .audience-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;text-align:left}
+        .audience-card{grid-column:span 2;border:1px solid #244051;border-radius:20px 4px 20px 4px;background:linear-gradient(145deg,#0c2237,#09192c);padding:27px 24px;min-height:205px;transition:transform .25s,border-color .25s,box-shadow .25s}
+        .audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:span 3}
+        .audience-card:hover{transform:translateY(-5px);border-color:#13c6bf;box-shadow:0 16px 35px #0003}
+        .audience-number{display:inline-grid;place-items:center;width:38px;height:38px;border:1px solid #16c7c0;border-radius:12px;color:#16c7c0;font-size:13px;font-weight:700}
+        .audience-card h3{font-size:18px;line-height:1.3;margin:18px 0 9px;color:#fff}
+        .audience-card p{font-size:14px;line-height:1.55;margin:0;color:#b8c9d2}
+        @media(max-width:750px){.audience{padding:65px 18px 75px}.audience-grid{grid-template-columns:1fr;gap:13px}.audience-card,.audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:auto;min-height:0;padding:22px}.audience h2{margin-bottom:28px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
