@@ -21,6 +21,9 @@ export default function SolicitarOrcamento() {
   const [modalOpen, setModalOpen] = useState(false);
   const [leadName, setLeadName] = useState("");
   const [leadWhatsapp, setLeadWhatsapp] = useState("");
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
+  const [leadSuccess, setLeadSuccess] = useState(false);
+  const [leadError, setLeadError] = useState("");
   useEffect(() => {
     if (!modalOpen) return;
     const onEscape = (event: KeyboardEvent) => { if (event.key === "Escape") setModalOpen(false); };
@@ -29,13 +32,29 @@ export default function SolicitarOrcamento() {
     document.body.style.overflow = "hidden";
     return () => { document.removeEventListener("keydown", onEscape); document.body.style.overflow = previous; };
   }, [modalOpen]);
-  const submitLead = (event: React.FormEvent<HTMLFormElement>) => {
+  const submitLead = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const phone = leadWhatsapp.replace(/\\D/g, "");
-    if (phone.length < 10 || phone.length > 13) return;
-    const subject = encodeURIComponent("Solicitação de reunião gratuita - Evolbim Engenharia");
-    const body = encodeURIComponent("Nome: " + leadName.trim() + "\\nWhatsApp: " + leadWhatsapp.trim() + "\\nOrigem: Landing page Evolbim");
-    window.location.href = "mailto:contato@evolbimengenharia.com.br?subject=" + subject + "&body=" + body;
+    if (leadSubmitting) return;
+    const phone = leadWhatsapp.replace(/\D/g, "");
+    if (phone.length < 10 || phone.length > 13) {
+      setLeadError("Informe um WhatsApp válido com DDD.");
+      return;
+    }
+    setLeadSubmitting(true);
+    setLeadError("");
+    try {
+      const response = await fetch("/api/fcs-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome: leadName.trim(), whatsapp: phone }),
+      });
+      if (!response.ok) throw new Error("Falha ao registrar solicitação");
+      setLeadSuccess(true);
+    } catch {
+      setLeadError("Não foi possível enviar sua solicitação agora. Tente novamente.");
+    } finally {
+      setLeadSubmitting(false);
+    }
   };
   return (
     <main className="landing">
@@ -49,7 +68,7 @@ export default function SolicitarOrcamento() {
           
           <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
           <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
-          <button className="cta" onClick={() => setModalOpen(true)} type="button">AGENDE SUA REUNIÃO GRATUITA</button>
+          <button className="cta" onClick={() => { setLeadSuccess(false); setLeadError(""); setModalOpen(true); }} type="button">AGENDE SUA REUNIÃO GRATUITA</button>
           <div className="hero-meta"><span className="hero-limited"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Vagas Limitadas</span><span className="hero-meta-divider" aria-hidden="true">|</span><span className="hero-location"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Jataí - GO e Região · Atendimento presencial e remoto</span></div>
         </div>
       </section>
@@ -181,15 +200,16 @@ export default function SolicitarOrcamento() {
           <Image src="/images/brand/logo-light.png" alt="Evolbim Engenharia" width={172} height={65} className="lead-logo" />
           <h2 id="lead-modal-title">Agende sua reunião <strong>gratuita.</strong></h2>
           <p className="lead-description">Preencha seus dados para que nossa equipe possa entrar em contato com você.</p>
-          <form onSubmit={submitLead} className="lead-form">
+          {leadSuccess ? <div className="lead-success" role="status"><strong>Solicitação recebida!</strong><p>Nossa equipe entrará em contato pelo WhatsApp informado.</p><button type="button" onClick={() => setModalOpen(false)}>FECHAR</button></div> : <form onSubmit={submitLead} className="lead-form">
             <label htmlFor="lead-name">Seu nome</label>
             <input id="lead-name" autoFocus required minLength={2} maxLength={100} value={leadName} onChange={(e) => setLeadName(e.target.value)} placeholder="Digite seu nome" autoComplete="name" />
             <label htmlFor="lead-phone">WhatsApp</label>
             <input id="lead-phone" required type="tel" inputMode="tel" pattern="[0-9()+.\\s-]{10,20}" title="Informe um WhatsApp válido com DDD" value={leadWhatsapp} onChange={(e) => setLeadWhatsapp(e.target.value)} placeholder="(64) 99999-9999" autoComplete="tel" />
-            <button type="submit">SOLICITAR REUNIÃO GRATUITA <span aria-hidden="true">↗</span></button>
-          </form>
-          <p className="lead-privacy">Seus dados serão usados apenas para responder à sua solicitação.</p>
-          <p className="lead-notice">Ao continuar, seu aplicativo de e-mail será aberto com a solicitação preenchida para envio.</p>
+            <button type="submit" disabled={leadSubmitting}>{leadSubmitting ? "ENVIANDO..." : "SOLICITAR REUNIÃO GRATUITA"} <span aria-hidden="true">↗</span></button>
+            {leadError && <p className="lead-error" role="alert">{leadError}</p>}
+          </form>}
+          {!leadSuccess && <p className="lead-privacy">Seus dados serão usados apenas para responder à sua solicitação.</p>
+          <p className="lead-notice">Seus dados serão encaminhados à equipe comercial da Evolbim.</p>}
         </div>
       </div>}
       <footer className="site-footer">
@@ -332,6 +352,8 @@ export default function SolicitarOrcamento() {
         .lead-form input:focus{border-color:#12c6bf;box-shadow:0 0 0 3px rgba(18,198,191,.2)}
         .lead-form button{margin-top:8px;width:100%;border:0;border-radius:6px;background:#12c6bf;color:#06212e;font-size:11px;font-weight:850;padding:12px 10px;min-height:42px;cursor:pointer;display:flex;justify-content:center;gap:12px;align-items:center}
         .lead-form button:hover{background:#38dfd6}
+        .lead-error{color:#ffb3b3;font-size:12px;text-align:center;margin:5px 0}
+        .lead-success{padding:16px 0;text-align:center}.lead-success strong{color:#12c6bf;font-size:20px}.lead-success p{font-size:14px;line-height:1.5}.lead-success button{background:#12c6bf;border:0;border-radius:7px;padding:12px 25px;font-weight:800;cursor:pointer}.lead-form button:disabled{opacity:.6;cursor:wait}
         .lead-privacy{font-size:10px;color:#b6d3d8;margin:11px 0 0}
         .lead-notice{font-size:9px;line-height:1.4;color:#8faab6;margin:5px 0 0}
         @media(max-width:480px){.lead-modal{padding:18px 18px 15px;border-radius:16px}.lead-modal h2{font-size:22px}}
