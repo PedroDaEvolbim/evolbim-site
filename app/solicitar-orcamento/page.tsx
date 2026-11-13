@@ -85,15 +85,15 @@ export default function SolicitarOrcamento() {
         .audience{background:radial-gradient(ellipse at 50% 10%,#103349 0%,#061526 52%,#04101e 100%);padding:90px 24px 108px;color:#f5f8fa}
         .audience-inner{max-width:1120px;margin:0 auto;text-align:center}
         .audience-label{display:inline-block;border:1px solid #1b5863;border-radius:30px;padding:8px 20px;color:#16c7c0;background:#0a2638;font-size:11px;font-weight:700;letter-spacing:1.6px}
-        .audience h2{font-size:clamp(26px,3vw,38px);font-weight:400;line-height:1.25;margin:22px 0 40px;color:#c6d3dc}
+        .audience h2{font-size:clamp(26px,3vw,38px);font-weight:400;line-height:1.25;margin:22px 0 34px;color:#c6d3dc}
         .audience h2 strong{color:#fff;font-weight:700}.audience h2 em{font-style:normal;color:#12c6bf;font-weight:600}
-        .audience-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px;text-align:left}
-        .audience-card{position:relative;overflow:hidden;grid-column:span 2;border:1px solid rgba(91,150,168,.24);border-radius:20px 4px 20px 4px;background:linear-gradient(145deg,rgba(18,49,68,.85),rgba(7,25,42,.98));padding:30px 28px;min-height:225px;transition:transform .25s,border-color .25s,box-shadow .25s;background-clip:padding-box}.audience-card:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 100% 0%,rgba(18,198,191,.11),transparent 58%);opacity:.35;transition:opacity .25s}.audience-card:hover:before{opacity:1}
+        .audience-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;text-align:left}
+        .audience-card{position:relative;overflow:hidden;grid-column:span 2;border:1px solid rgba(91,150,168,.24);border-radius:20px 4px 20px 4px;background:linear-gradient(145deg,rgba(18,49,68,.85),rgba(7,25,42,.98));padding:25px 25px;min-height:195px;transition:transform .25s,border-color .25s,box-shadow .25s;background-clip:padding-box}.audience-card:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 100% 0%,rgba(18,198,191,.11),transparent 58%);opacity:.35;transition:opacity .25s}.audience-card:hover:before{opacity:1}
         .audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:span 3}
         .audience-card:hover{transform:translateY(-5px);border-color:#13c6bf;box-shadow:0 16px 35px #0003}
-        .audience-icon{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid rgba(18,198,191,.32);background:rgba(18,198,191,.08);border-radius:13px;color:#2bdbd2}.audience-icon svg{width:23px;height:23px}
-        .audience-card h3{position:relative;font-size:18px;line-height:1.35;letter-spacing:-.25px;margin:24px 0 10px;color:#fff;font-weight:650}
-        .audience-card p{position:relative;font-size:14px;line-height:1.6;margin:0;color:#b8c9d2}
+        .audience-icon{display:inline-grid;place-items:center;width:38px;height:38px;border:1px solid rgba(18,198,191,.32);background:rgba(18,198,191,.08);border-radius:13px;color:#2bdbd2}.audience-icon svg{width:20px;height:20px}
+        .audience-card h3{position:relative;font-size:16px;line-height:1.4;letter-spacing:-.2px;margin:18px 0 8px;color:#fff;font-weight:650}
+        .audience-card p{position:relative;font-size:13px;line-height:1.55;margin:0;color:#b8c9d2}
         @media(max-width:750px){.audience{padding:65px 18px 75px}.audience-grid{grid-template-columns:1fr;gap:13px}.audience-card,.audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:auto;min-height:0;padding:22px}.audience h2{margin-bottom:28px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
