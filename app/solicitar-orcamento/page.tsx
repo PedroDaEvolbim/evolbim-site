@@ -109,6 +109,24 @@ export default function SolicitarOrcamento() {
           </div>
         </div>
       </section>
+      <section className="founder" aria-labelledby="founder-title">
+        <div className="founder-inner">
+          <div className="founder-copy">
+            <span className="founder-kicker">QUEM DESENVOLVEU A METODOLOGIA</span>
+            <h2 id="founder-title">Quem está por trás do <strong>Método APEX</strong></h2>
+            <p>Por trás da metodologia está <strong>Pedro Moreira</strong>, engenheiro civil, pós-graduado em Infraestrutura BIM e fundador da <strong>Evolbim Engenharia</strong>.</p>
+            <p>Sua trajetória profissional reúne experiências em gestão, execução e fiscalização de obras, implantação de empreendimentos imobiliários e infraestrutura rodoviária.</p>
+            <p>A vivência prática no setor da construção civil, aliada ao conhecimento técnico e à aplicação de novas tecnologias, contribuiu para o desenvolvimento do <strong>Método APEX — Análise, Planejamento, Engenharia e Execução</strong>.</p>
+            <p>Uma metodologia criada para integrar as etapas de um empreendimento, reduzir falhas de comunicação, antecipar problemas e proporcionar mais previsibilidade, qualidade e controle.</p>
+            <p className="founder-signature">Engenharia inteligente do início ao resultado.</p>
+          </div>
+          <div className="founder-visual">
+            <div className="founder-brand"><Image src="/images/brand/logo-light.png" alt="Evolbim Engenharia" width={275} height={98} /></div>
+            <div className="founder-apex">APEX<span>ANÁLISE · PLANEJAMENTO · ENGENHARIA · EXECUÇÃO</span></div>
+            <div className="founder-name"><strong>Pedro Moreira</strong><span>Engenheiro Civil · Fundador da Evolbim Engenharia</span></div>
+          </div>
+        </div>
+      </section>
       <section className="details" id="orcamento">
         <div className="details-inner">
           <p className="eyebrow">EVOLBIM ENGENHARIA</p>
@@ -185,6 +203,23 @@ export default function SolicitarOrcamento() {
         .urgency-visual-label{position:absolute;left:18px;bottom:18px;right:18px;display:flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid rgba(18,198,191,.3);border-radius:10px;background:rgba(4,20,34,.82);backdrop-filter:blur(8px);font-size:10px;font-weight:700;letter-spacing:1px;color:#d7edf0}
         .urgency-visual-label span{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#12c6bf}
         @media(max-width:800px){.urgency{padding:58px 20px 65px}.urgency-inner{grid-template-columns:1fr;gap:28px}.urgency-copy{max-width:none}.urgency h2{font-size:clamp(29px,7vw,39px)}.urgency p{font-size:14px}.urgency-visual{min-height:260px;max-height:390px}}
+        .founder{padding:82px 24px 88px;background:#f4f8fa;color:#071b2c}
+        .founder-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);align-items:center;gap:70px}
+        .founder-kicker{font-size:11px;letter-spacing:1.7px;font-weight:750;color:#008e8a;border-bottom:1px solid #12c6bf;padding-bottom:9px}
+        .founder h2{font-size:clamp(30px,3.2vw,43px);line-height:1.16;font-weight:400;letter-spacing:-.8px;margin:23px 0 25px}
+        .founder h2 strong{font-weight:750;color:#08243b}
+        .founder-copy p{font-size:14px;line-height:1.75;color:#3c5060;margin:0 0 15px}
+        .founder-copy p strong{color:#071b2c}
+        .founder-copy .founder-signature{color:#008e8a;font-weight:750;margin-top:22px}
+        .founder-visual{min-height:440px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;padding:35px;border-radius:35px 5px 35px 5px;background:radial-gradient(circle at 80% 25%,#136078 0%,transparent 40%),linear-gradient(140deg,#071a2c,#092c42 70%,#041524);border:1px solid #12c6bf55;box-shadow:0 20px 50px #071b2c2c;color:#fff}
+        .founder-visual:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.23;background-image:linear-gradient(#12c6bf24 1px,transparent 1px),linear-gradient(90deg,#12c6bf24 1px,transparent 1px);background-size:48px 48px}
+        .founder-brand,.founder-apex,.founder-name{position:relative;z-index:1}
+        .founder-brand img{object-fit:contain;max-width:100%;height:auto}
+        .founder-apex{font-size:clamp(74px,9vw,125px);line-height:1;font-weight:800;letter-spacing:-7px;color:#12c6bf}
+        .founder-apex span{display:block;font-size:10px;letter-spacing:1.2px;font-weight:650;color:#c4dbe2;margin-top:12px;line-height:1.5}
+        .founder-name{border-top:1px solid #ffffff33;padding-top:18px;display:grid;gap:6px}
+        .founder-name strong{font-size:19px}.founder-name span{font-size:12px;color:#c0d3de}
+        @media(max-width:800px){.founder{padding:65px 20px}.founder-inner{grid-template-columns:1fr;gap:27px}.founder-visual{min-height:330px}.founder h2{font-size:clamp(29px,7vw,38px)}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
