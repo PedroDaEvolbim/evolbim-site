@@ -67,6 +67,30 @@ export default function SolicitarOrcamento() {
           </div>
         </div>
       </section>
+      <section className="solution" aria-labelledby="solution-title">
+        <div className="solution-inner">
+          <span className="solution-kicker">A SOLUÇÃO QUE ENTREGAMOS</span>
+          <h2 id="solution-title">Engenharia integrada, <strong>do projeto à execução.</strong></h2>
+          <p className="solution-intro">Uma abordagem que conecta decisões técnicas, organização e acompanhamento para que cada etapa do seu empreendimento tenha mais previsibilidade.</p>
+          <div className="solution-grid">
+            <article className="solution-card">
+              <span className="solution-index">01</span>
+              <h3>Projetos integrados</h3>
+              <p>Desenvolvemos soluções de engenharia com atenção à compatibilização, às necessidades do cliente e à viabilidade técnica do empreendimento.</p>
+            </article>
+            <article className="solution-card">
+              <span className="solution-index">02</span>
+              <h3>Planejamento inteligente</h3>
+              <p>Organizamos etapas, prazos e orçamento para antecipar decisões, reduzir imprevistos e dar mais clareza ao investimento.</p>
+            </article>
+            <article className="solution-card">
+              <span className="solution-index">03</span>
+              <h3>Execução acompanhada</h3>
+              <p>Oferecemos orientação e acompanhamento técnico para apoiar a execução, monitorar o andamento e manter o foco na qualidade.</p>
+            </article>
+          </div>
+        </div>
+      </section>
       <section className="details" id="orcamento">
         <div className="details-inner">
           <p className="eyebrow">EVOLBIM ENGENHARIA</p>
@@ -118,6 +142,20 @@ export default function SolicitarOrcamento() {
         .challenge-cta{display:inline-flex;align-items:center;justify-content:center;gap:24px;margin-top:17px;padding:18px 25px;min-height:56px;border-radius:22px 3px 22px 3px;background:#12c6bf;color:#06222a;font-size:13px;font-weight:800;text-decoration:none;letter-spacing:.3px;transition:transform .2s,background .2s,box-shadow .2s}
         .challenge-cta:hover{background:#3eddd4;transform:translateY(-2px);box-shadow:0 12px 24px #12c6bf33}.challenge-cta span{font-size:19px}
         @media(max-width:800px){.challenge{padding:70px 20px}.challenge-inner{grid-template-columns:1fr;gap:34px}.challenge-photo{min-height:330px;max-height:430px}.challenge-visual{max-width:440px}.challenge h2{font-size:clamp(29px,7vw,39px)}.challenge-copy p{font-size:14px}.challenge-cta{width:100%;max-width:370px}}
+        .solution{position:relative;overflow:hidden;padding:94px 24px 105px;background:linear-gradient(140deg,#071a2c 0%,#041225 65%,#071c30 100%);color:#f6fafc}
+        .solution:before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#3c74831a 1px,transparent 1px),linear-gradient(90deg,#3c74831a 1px,transparent 1px);background-size:74px 74px;mask-image:linear-gradient(90deg,transparent,#000 45%,transparent)}
+        .solution-inner{position:relative;max-width:1120px;margin:auto;text-align:center}
+        .solution-kicker{display:inline-block;font-size:11px;letter-spacing:2px;font-weight:700;color:#12c6bf;border-bottom:1px solid #12c6bf;padding-bottom:9px}
+        .solution h2{font-size:clamp(30px,3.3vw,43px);line-height:1.2;font-weight:400;letter-spacing:-.8px;margin:22px auto 15px;max-width:750px}
+        .solution h2 strong{font-weight:750;color:#fff}
+        .solution-intro{font-size:14px;line-height:1.7;color:#afc5d0;max-width:660px;margin:0 auto 36px}
+        .solution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;text-align:left}
+        .solution-card{background:linear-gradient(155deg,#102a41,#091d31);border:1px solid #28506988;border-radius:20px 4px 20px 4px;padding:30px 27px 32px;min-height:270px;transition:transform .25s,border-color .25s,box-shadow .25s}
+        .solution-card:hover{transform:translateY(-5px);border-color:#12c6bf;box-shadow:0 16px 38px #0004}
+        .solution-index{display:inline-grid;place-items:center;background:#12c6bf;color:#04202a;font-size:16px;font-weight:800;width:44px;height:44px;border-radius:12px}
+        .solution-card h3{font-size:19px;line-height:1.3;margin:22px 0 12px;color:#f8fcff}
+        .solution-card p{font-size:14px;line-height:1.7;margin:0;color:#b8cad4}
+        @media(max-width:750px){.solution{padding:68px 18px 75px}.solution-grid{grid-template-columns:1fr;gap:14px}.solution-card{min-height:0;padding:25px}.solution-intro{margin-bottom:28px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
