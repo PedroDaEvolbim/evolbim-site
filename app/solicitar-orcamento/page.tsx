@@ -108,14 +108,14 @@ export default function SolicitarOrcamento() {
         .audience-card h3{position:relative;font-size:16px;line-height:1.4;letter-spacing:-.2px;margin:18px 0 8px;color:#fff;font-weight:650}
         .audience-card p{position:relative;font-size:13px;line-height:1.55;margin:0;color:#b8c9d2}
         @media(max-width:750px){.audience{padding:65px 18px 75px}.audience-grid{grid-template-columns:1fr;gap:13px}.audience-card,.audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:auto;min-height:0;padding:22px}.audience h2{margin-bottom:28px}}
-        .challenge{background:linear-gradient(180deg,#f6f8f9,#fff);color:#0b2032;padding:105px 24px}
+        .challenge{background:radial-gradient(ellipse at 80% 40%,#102b40 0%,#071a2c 46%,#04101e 100%);color:#f2f7f8;padding:105px 24px}
         .challenge-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:center;gap:66px}
         .challenge-photo{min-height:525px;height:100%;border-radius:5px 54px 5px 54px;background:linear-gradient(0deg,rgba(5,22,36,.16),rgba(5,22,36,.05)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85') center/cover no-repeat;box-shadow:0 20px 55px rgba(8,29,47,.13)}
-        .challenge-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.8px;color:#008f8c;border-bottom:1px solid #12c6bf;padding-bottom:8px}
-        .challenge h2{font-size:clamp(30px,3.1vw,43px);line-height:1.16;letter-spacing:-1px;font-weight:400;margin:22px 0 24px;color:#10263a}
-        .challenge h2 strong{font-weight:750;color:#071c2f}
-        .challenge-copy p{font-size:15px;line-height:1.75;color:#4b5d6b;margin:0 0 17px}
-        .challenge-copy p strong{color:#122d40}
+        .challenge-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.8px;color:#25d4cb;border-bottom:1px solid #12c6bf;padding-bottom:8px}
+        .challenge h2{font-size:clamp(30px,3.1vw,43px);line-height:1.16;letter-spacing:-1px;font-weight:400;margin:22px 0 24px;color:#f0f6f8}
+        .challenge h2 strong{font-weight:750;color:#fff}
+        .challenge-copy p{font-size:15px;line-height:1.75;color:#b9cbd5;margin:0 0 17px}
+        .challenge-copy p strong{color:#fff}
         .challenge-cta{display:inline-flex;align-items:center;justify-content:center;gap:24px;margin-top:17px;padding:18px 25px;min-height:56px;border-radius:22px 3px 22px 3px;background:#12c6bf;color:#06222a;font-size:13px;font-weight:800;text-decoration:none;letter-spacing:.3px;transition:transform .2s,background .2s,box-shadow .2s}
         .challenge-cta:hover{background:#3eddd4;transform:translateY(-2px);box-shadow:0 12px 24px #12c6bf33}.challenge-cta span{font-size:19px}
         @media(max-width:800px){.challenge{padding:70px 20px}.challenge-inner{grid-template-columns:1fr;gap:34px}.challenge-photo{min-height:330px;max-height:430px}.challenge h2{font-size:clamp(29px,7vw,39px)}.challenge-copy p{font-size:14px}.challenge-cta{width:100%;max-width:370px}}
