@@ -59,7 +59,6 @@ export default function SolicitarOrcamento() {
         <div className="challenge-inner">
           <div className="challenge-photo" role="img" aria-label="Mesa de trabalho com projetos arquitetônicos e documentos de planejamento" />
           <div className="challenge-copy">
-            <span className="challenge-eyebrow">POR QUE TANTAS OBRAS SAEM DO PLANEJADO?</span>
             <h2 id="challenge-title">O maior risco da sua obra? <strong>Começar sem planejamento.</strong></h2>
             <p>Uma obra não começa quando a construção é iniciada. Ela começa nas decisões tomadas antes: quais projetos desenvolver, como organizar o orçamento e quem será responsável por cada etapa.</p>
             <p>Sem essa integração, surgem incompatibilidades, retrabalhos, desperdícios e custos que poderiam ser previstos. O que parecia simples pode se transformar em atrasos e decisões tomadas às pressas.</p>
