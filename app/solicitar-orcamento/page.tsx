@@ -208,8 +208,8 @@ export default function SolicitarOrcamento() {
             <button type="submit" disabled={leadSubmitting}>{leadSubmitting ? "ENVIANDO..." : "SOLICITAR REUNIÃO GRATUITA"} <span aria-hidden="true">↗</span></button>
             {leadError && <p className="lead-error" role="alert">{leadError}</p>}
           </form>}
-          {!leadSuccess && <p className="lead-privacy">Seus dados serão usados apenas para responder à sua solicitação.</p>
-          <p className="lead-notice">Seus dados serão encaminhados à equipe comercial da Evolbim.</p>}
+          {!leadSuccess && <><p className="lead-privacy">Seus dados serão usados apenas para responder à sua solicitação.</p>
+          <p className="lead-notice">Seus dados serão encaminhados à equipe comercial da Evolbim.</p></>}
         </div>
       </div>}
       <footer className="site-footer">
