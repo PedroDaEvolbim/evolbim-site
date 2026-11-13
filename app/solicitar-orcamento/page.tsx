@@ -57,11 +57,11 @@ export default function SolicitarOrcamento() {
       </section>
       <section className="challenge" aria-labelledby="challenge-title">
         <div className="challenge-inner">
-          <div className="challenge-photo" role="img" aria-label="Mesa de trabalho com projetos arquitetônicos e documentos de planejamento" />
+          <div className="challenge-visual"><div className="challenge-photo" role="img" aria-label="Profissional analisando desenhos e projetos arquitetônicos" /><div className="challenge-photo-caption"><span className="challenge-caption-dot" /> ENGENHARIA • PLANEJAMENTO • EXECUÇÃO</div></div>
           <div className="challenge-copy">
             <h2 id="challenge-title">O maior risco da sua obra? <strong>Começar sem planejamento.</strong></h2>
             <p>Uma obra não começa quando a construção é iniciada. Ela começa nas decisões tomadas antes: quais projetos desenvolver, como organizar o orçamento e quem será responsável por cada etapa.</p>
-            <p>Sem essa integração, surgem incompatibilidades, retrabalhos, desperdícios e custos que poderiam ser previstos. O que parecia simples pode se transformar em atrasos e decisões tomadas às pressas.</p>
+            <div className="challenge-risks"><div><span aria-hidden="true">↗</span> Projetos desconectados geram retrabalhos.</div><div><span aria-hidden="true">↗</span> Orçamentos imprecisos aumentam os custos.</div><div><span aria-hidden="true">↗</span> Falta de planejamento provoca atrasos.</div></div>
             <p>Na <strong>Evolbim Engenharia</strong>, conectamos projetos, planejamento e acompanhamento técnico para que você avance com mais clareza, segurança e controle.</p>
             <a className="challenge-cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA <span aria-hidden="true">↗</span></a>
           </div>
@@ -108,16 +108,16 @@ export default function SolicitarOrcamento() {
         .audience-card p{position:relative;font-size:13px;line-height:1.55;margin:0;color:#b8c9d2}
         @media(max-width:750px){.audience{padding:65px 18px 75px}.audience-grid{grid-template-columns:1fr;gap:13px}.audience-card,.audience-card:nth-child(4),.audience-card:nth-child(5){grid-column:auto;min-height:0;padding:22px}.audience h2{margin-bottom:28px}}
         .challenge{background:radial-gradient(ellipse at 80% 40%,#102b40 0%,#071a2c 46%,#04101e 100%);color:#f2f7f8;padding:105px 24px}
-        .challenge-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:center;gap:66px}
-        .challenge-photo{min-height:525px;height:100%;border-radius:5px 54px 5px 54px;background:linear-gradient(0deg,rgba(5,22,36,.16),rgba(5,22,36,.05)),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85') center/cover no-repeat;box-shadow:0 20px 55px rgba(8,29,47,.13)}
+        .challenge-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);align-items:center;gap:70px}
+        .challenge-visual{position:relative;max-width:470px;width:100%;margin:auto}.challenge-photo{min-height:470px;aspect-ratio:4/4.7;border-radius:30px 90px 30px 90px;background:linear-gradient(0deg,rgba(5,22,36,.48),rgba(5,22,36,.03) 50%),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85') center/cover no-repeat;box-shadow:0 24px 65px rgba(0,0,0,.25);background-position:center 45%}.challenge-photo-caption{position:absolute;bottom:22px;left:20px;right:20px;display:flex;align-items:center;gap:9px;padding:13px 15px;background:rgba(4,19,32,.83);border:1px solid rgba(18,198,191,.32);border-radius:12px;color:#d7edf0;backdrop-filter:blur(10px);font-size:10px;font-weight:700;letter-spacing:1px}.challenge-caption-dot{width:7px;height:7px;border-radius:50%;background:#12c6bf;box-shadow:0 0 12px #12c6bf}
         .challenge-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:1.8px;color:#25d4cb;border-bottom:1px solid #12c6bf;padding-bottom:8px}
         .challenge h2{font-size:clamp(30px,3.1vw,43px);line-height:1.16;letter-spacing:-1px;font-weight:400;margin:22px 0 24px;color:#f0f6f8}
-        .challenge h2 strong{font-weight:750;color:#fff}
+        .challenge h2 strong{font-weight:750;color:#12c6bf}
         .challenge-copy p{font-size:15px;line-height:1.75;color:#b9cbd5;margin:0 0 17px}
-        .challenge-copy p strong{color:#fff}
+        .challenge-copy p strong{color:#fff}.challenge-risks{display:grid;gap:12px;margin:22px 0 25px}.challenge-risks div{display:flex;align-items:center;gap:13px;color:#e0ebef;font-size:14px;line-height:1.4}.challenge-risks span{flex:0 0 27px;width:27px;height:27px;display:grid;place-items:center;border:1px solid #12c6bf55;border-radius:9px;background:#12c6bf13;color:#12c6bf;font-size:17px}
         .challenge-cta{display:inline-flex;align-items:center;justify-content:center;gap:24px;margin-top:17px;padding:18px 25px;min-height:56px;border-radius:22px 3px 22px 3px;background:#12c6bf;color:#06222a;font-size:13px;font-weight:800;text-decoration:none;letter-spacing:.3px;transition:transform .2s,background .2s,box-shadow .2s}
         .challenge-cta:hover{background:#3eddd4;transform:translateY(-2px);box-shadow:0 12px 24px #12c6bf33}.challenge-cta span{font-size:19px}
-        @media(max-width:800px){.challenge{padding:70px 20px}.challenge-inner{grid-template-columns:1fr;gap:34px}.challenge-photo{min-height:330px;max-height:430px}.challenge h2{font-size:clamp(29px,7vw,39px)}.challenge-copy p{font-size:14px}.challenge-cta{width:100%;max-width:370px}}
+        @media(max-width:800px){.challenge{padding:70px 20px}.challenge-inner{grid-template-columns:1fr;gap:34px}.challenge-photo{min-height:330px;max-height:430px}.challenge-visual{max-width:440px}.challenge h2{font-size:clamp(29px,7vw,39px)}.challenge-copy p{font-size:14px}.challenge-cta{width:100%;max-width:370px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
