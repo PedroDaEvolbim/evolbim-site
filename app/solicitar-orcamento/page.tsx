@@ -70,25 +70,31 @@ export default function SolicitarOrcamento() {
       <section className="solution" aria-labelledby="solution-title">
         <div className="solution-inner">
           <span className="solution-kicker">A SOLUÇÃO QUE ENTREGAMOS</span>
-          <h2 id="solution-title">Engenharia integrada, <strong>do projeto à execução.</strong></h2>
-          <p className="solution-intro">Uma abordagem que conecta decisões técnicas, organização e acompanhamento para que cada etapa do seu empreendimento tenha mais previsibilidade.</p>
+          <h2 id="solution-title">Método <strong>APEX</strong></h2>
+          <p className="solution-intro">Da concepção à realização, uma metodologia que integra soluções técnicas, tecnologia e gestão para desenvolver empreendimentos com mais previsibilidade e controle.</p>
           <div className="solution-grid">
             <article className="solution-card">
-              <span className="solution-index">01</span>
-              <h3>Projetos integrados</h3>
-              <p>Desenvolvemos soluções de engenharia com atenção à compatibilização, às necessidades do cliente e à viabilidade técnica do empreendimento.</p>
+              <span className="solution-index">A</span>
+              <h3>Análise</h3>
+              <p>Entendemos as necessidades, avaliamos as condições e identificamos os requisitos técnicos e as oportunidades do empreendimento.</p>
             </article>
             <article className="solution-card">
-              <span className="solution-index">02</span>
-              <h3>Planejamento inteligente</h3>
-              <p>Organizamos etapas, prazos e orçamento para antecipar decisões, reduzir imprevistos e dar mais clareza ao investimento.</p>
+              <span className="solution-index">P</span>
+              <h3>Planejamento</h3>
+              <p>Organizamos escopo, etapas, prazos e orçamento para orientar decisões com mais clareza e previsibilidade.</p>
             </article>
             <article className="solution-card">
-              <span className="solution-index">03</span>
-              <h3>Execução acompanhada</h3>
-              <p>Oferecemos orientação e acompanhamento técnico para apoiar a execução, monitorar o andamento e manter o foco na qualidade.</p>
+              <span className="solution-index">E</span>
+              <h3>Engenharia</h3>
+              <p>Desenvolvemos e integramos soluções técnicas, projetos e tecnologias para reduzir incompatibilidades e retrabalhos.</p>
+            </article>
+            <article className="solution-card">
+              <span className="solution-index">X</span>
+              <h3>Execução</h3>
+              <p>Aplicamos o planejamento à prática, com orientação e acompanhamento técnico para apoiar qualidade e controle.</p>
             </article>
           </div>
+          <p className="solution-tagline">Engenharia inteligente do início ao resultado.</p>
         </div>
       </section>
       <section className="details" id="orcamento">
@@ -149,13 +155,13 @@ export default function SolicitarOrcamento() {
         .solution h2{font-size:clamp(30px,3.3vw,43px);line-height:1.2;font-weight:400;letter-spacing:-.8px;margin:22px auto 15px;max-width:750px}
         .solution h2 strong{font-weight:750;color:#fff}
         .solution-intro{font-size:14px;line-height:1.7;color:#afc5d0;max-width:660px;margin:0 auto 36px}
-        .solution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;text-align:left}
-        .solution-card{background:linear-gradient(155deg,#102a41,#091d31);border:1px solid #28506988;border-radius:20px 4px 20px 4px;padding:30px 27px 32px;min-height:270px;transition:transform .25s,border-color .25s,box-shadow .25s}
+        .solution-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;text-align:left}
+        .solution-card{background:linear-gradient(155deg,#102a41,#091d31);border:1px solid #28506988;border-radius:20px 4px 20px 4px;padding:26px 22px 28px;min-height:265px;transition:transform .25s,border-color .25s,box-shadow .25s}
         .solution-card:hover{transform:translateY(-5px);border-color:#12c6bf;box-shadow:0 16px 38px #0004}
         .solution-index{display:inline-grid;place-items:center;background:#12c6bf;color:#04202a;font-size:16px;font-weight:800;width:44px;height:44px;border-radius:12px}
         .solution-card h3{font-size:19px;line-height:1.3;margin:22px 0 12px;color:#f8fcff}
-        .solution-card p{font-size:14px;line-height:1.7;margin:0;color:#b8cad4}
-        @media(max-width:750px){.solution{padding:68px 18px 75px}.solution-grid{grid-template-columns:1fr;gap:14px}.solution-card{min-height:0;padding:25px}.solution-intro{margin-bottom:28px}}
+        .solution-card p{font-size:13px;line-height:1.65;margin:0;color:#b8cad4}.solution-tagline{font-size:15px;font-weight:600;color:#12c6bf;letter-spacing:.3px;margin:32px 0 0}
+        @media(min-width:751px) and (max-width:1000px){.solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:750px){.solution{padding:68px 18px 75px}.solution-grid{grid-template-columns:1fr;gap:14px}.solution-card{min-height:0;padding:25px}.solution-intro{margin-bottom:28px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
