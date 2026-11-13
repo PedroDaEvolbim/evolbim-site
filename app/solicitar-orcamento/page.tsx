@@ -31,8 +31,7 @@ export default function SolicitarOrcamento() {
           <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
           <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
           <a className="cta" href="mailto:contato@evolbimengenharia.com.br?subject=Agendamento%20de%20reuni%C3%A3o%20gratuita%20-%20Evolbim">AGENDE SUA REUNIÃO GRATUITA</a>
-          <span className="limited-spots limited-spots-hero"><span aria-hidden="true">✦</span> Vagas Limitadas</span>
-          <div className="region"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Atendimento em Jataí-GO e Região</div>
+          <div className="hero-meta"><span className="hero-limited">Vagas Limitadas</span><span className="hero-meta-divider" aria-hidden="true">|</span><span>Atendimento em Jataí-GO e Região</span></div>
         </div>
       </section>
       <section className="audience" aria-labelledby="audience-title">
@@ -277,6 +276,9 @@ export default function SolicitarOrcamento() {
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
+        .hero-meta{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:16px;font-size:12px;color:#d0e0e6;line-height:1.5}
+        .hero-limited{font-weight:750;color:#12c6bf}
+        .hero-meta-divider{color:#7f9da8}
         .limited-spots{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.25px;color:#c6d8df}
         .limited-spots span{color:#12c6bf;font-size:11px}
         .limited-spots-hero{margin-top:13px}
