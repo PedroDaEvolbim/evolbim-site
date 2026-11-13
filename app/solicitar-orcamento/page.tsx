@@ -21,7 +21,7 @@ export default function SolicitarOrcamento() {
   return (
     <main className="landing">
       <CursorHalo />
-      <header className="top">
+      <header className="top" id="topo">
         <Image src="/images/brand/logo-light.png" alt="Evolbim Engenharia" width={240} height={85} className="logo" priority />
         <span className="reading">LEITURA DE 2 MINUTOS</span>
       </header>
@@ -155,7 +155,21 @@ export default function SolicitarOrcamento() {
           </div>
         </div>
       </section>
-      <footer>© {new Date().getFullYear()} Evolbim Engenharia</footer>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-top">
+            <div className="footer-brand">
+              <Image src="/images/brand/logo-light.png" alt="Evolbim Engenharia" width={195} height={70} />
+              <p>Engenharia inteligente do início ao resultado.</p>
+            </div>
+            <a className="footer-back" href="#topo"><span aria-hidden="true">↑</span> Voltar ao topo</a>
+          </div>
+          <div className="footer-bottom">
+            <span>© {new Date().getFullYear()} Evolbim Engenharia. Todos os direitos reservados.</span>
+            <span>Jataí - GO · Atendimento presencial e remoto</span>
+          </div>
+        </div>
+      </footer>
       <style>{`
         .cursor-halo{position:fixed;z-index:2147483647;width:46px;height:46px;border:2px solid #12c6bf;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%) scale(.8);opacity:0;transition:opacity .18s,transform .2s;display:grid;place-items:center;box-shadow:0 0 0 3px #12c6bf22,0 0 18px #12c6bf66}.cursor-halo span{width:4px;height:4px;background:#12c6bf;border-radius:50%}.cursor-halo.visible{opacity:1;transform:translate(-50%,-50%) scale(1)}.cursor-halo.active{transform:translate(-50%,-50%) scale(1.45);background:#12c6bf18}@media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-halo{display:none!important}}
         *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}
@@ -261,7 +275,16 @@ export default function SolicitarOrcamento() {
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
-        footer{text-align:center;padding:30px;font-size:13px;color:#adc1c4}
+        .site-footer{background:#061526;color:#adc1c4;padding:43px 24px 25px;border-top:1px solid rgba(18,198,191,.19)}
+        .footer-inner{max-width:1120px;margin:0 auto}
+        .footer-top{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:31px}
+        .footer-brand img{display:block;object-fit:contain;object-position:left center;width:180px;height:auto}
+        .footer-brand p{font-size:12px;line-height:1.6;color:#a9c1ca;margin:8px 0 0}
+        .footer-back{display:inline-flex;align-items:center;gap:11px;color:#e6f5f7;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap;transition:color .2s}
+        .footer-back:hover{color:#12c6bf}
+        .footer-back span{color:#12c6bf;font-size:23px;line-height:1}
+        .footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid rgba(180,214,222,.18);padding-top:19px;font-size:11px;line-height:1.6;color:#8faab6}
+        @media(max-width:600px){.site-footer{padding:35px 20px 25px}.footer-top{align-items:flex-start}.footer-brand img{width:145px}.footer-brand p{max-width:210px}.footer-back{font-size:11px;gap:6px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:7px}}
         @media(max-width:750px){.top{height:82px;padding:5px 18px}.logo{width:120px;height:70px}.reading{font-size:10px}.hero{min-height:600px;background:linear-gradient(90deg,rgba(5,19,32,.96),rgba(5,19,32,.72)),url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat}.copy{padding:45px 22px}.copy>*{max-width:460px}h1{font-size:clamp(34px,8vw,44px)}.copy p{font-size:14px}.cta{min-width:0;width:100%;max-width:340px}.details{padding:65px 6%}}
       `}</style>
     </main>
