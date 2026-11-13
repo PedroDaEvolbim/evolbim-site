@@ -100,7 +100,7 @@ export default function SolicitarOrcamento() {
       <section className="urgency" aria-labelledby="urgency-title">
         <div className="urgency-inner">
           <div className="urgency-copy">
-            <span className="urgency-kicker">Mas você precisa agir agora.</span>
+            <span className="urgency-kicker">MAS VOCÊ PRECISA AGIR AGORA.</span>
             <h2 id="urgency-title">O tempo não espera. <strong>Sua obra também não deveria.</strong></h2>
             <p>Adiar o planejamento ou continuar executando sem uma gestão adequada pode aumentar custos, gerar retrabalhos e comprometer prazos.</p>
           </div>
