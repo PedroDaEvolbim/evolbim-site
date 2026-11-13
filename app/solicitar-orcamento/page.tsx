@@ -30,7 +30,7 @@ export default function SolicitarOrcamento() {
           
           <h1>Desenvolva e execute seu projeto com segurança, eficiência e <em>alto padrão.</em></h1>
           <p>Projetos de engenharia, planejamento, orçamento e acompanhamento técnico em um processo completo, do estudo à execução.</p>
-          <a className="cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA</a>
+          <a className="cta" href="mailto:contato@evolbimengenharia.com.br?subject=Agendamento%20de%20reuni%C3%A3o%20gratuita%20-%20Evolbim">AGENDE SUA REUNIÃO GRATUITA</a>
           <div className="region"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Atendimento em Jataí-GO e Região</div>
         </div>
       </section>
@@ -63,7 +63,7 @@ export default function SolicitarOrcamento() {
             <p>Uma obra não começa quando a construção é iniciada. Ela começa nas decisões tomadas antes: quais projetos desenvolver, como organizar o orçamento e quem será responsável por cada etapa.</p>
             <div className="challenge-risks"><div><span aria-hidden="true">↗</span> Projetos desconectados geram retrabalhos.</div><div><span aria-hidden="true">↗</span> Orçamentos imprecisos aumentam os custos.</div><div><span aria-hidden="true">↗</span> Falta de planejamento provoca atrasos.</div></div>
             <p>Na <strong>Evolbim Engenharia</strong>, conectamos projetos, planejamento e acompanhamento técnico para que você avance com mais clareza, segurança e controle.</p>
-            <a className="challenge-cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA <span aria-hidden="true">↗</span></a>
+            <a className="challenge-cta" href="mailto:contato@evolbimengenharia.com.br?subject=Agendamento%20de%20reuni%C3%A3o%20gratuita%20-%20Evolbim">AGENDE SUA REUNIÃO GRATUITA <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -132,7 +132,7 @@ export default function SolicitarOrcamento() {
           <div className="faq-intro">
             <span className="faq-kicker">PERGUNTAS MAIS FREQUENTES</span>
             <h2 id="faq-title">Ainda com <strong>dúvidas?</strong></h2>
-            <a className="faq-cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA <span aria-hidden="true">↗</span></a>
+            <a className="faq-cta" href="mailto:contato@evolbimengenharia.com.br?subject=Agendamento%20de%20reuni%C3%A3o%20gratuita%20-%20Evolbim">AGENDE SUA REUNIÃO GRATUITA <span aria-hidden="true">↗</span></a>
             <p>Converse com a Evolbim e entenda os próximos passos do seu projeto.</p>
           </div>
           <div className="faq-items">
@@ -153,14 +153,6 @@ export default function SolicitarOrcamento() {
               <p>O investimento depende do tipo de serviço, da área, da complexidade e dos entregáveis necessários. Na conversa inicial, entendemos sua demanda para preparar uma proposta compatível com o escopo.</p>
             </details>
           </div>
-        </div>
-      </section>
-      <section className="details" id="orcamento">
-        <div className="details-inner">
-          <p className="eyebrow">EVOLBIM ENGENHARIA</p>
-          <h2>Seu projeto merece planejamento desde o início.</h2>
-          <p>Conte para nossa equipe o que você pretende desenvolver. Vamos entender sua necessidade e orientar os próximos passos.</p>
-          <a className="cta" href="mailto:contato@evolbimengenharia.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20or%C3%A7amento%20-%20Site%20Evolbim">Agende sua reunião gratuita <span aria-hidden="true">→</span></a>
         </div>
       </section>
       <footer>© {new Date().getFullYear()} Evolbim Engenharia</footer>
