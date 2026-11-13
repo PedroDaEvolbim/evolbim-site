@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+// Server-side forwarding uses FCS_INGEST_URL from the current deployment environment.
 
 export async function POST(request: NextRequest) {
   const destination = process.env.FCS_INGEST_URL;
