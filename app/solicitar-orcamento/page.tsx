@@ -99,9 +99,14 @@ export default function SolicitarOrcamento() {
       </section>
       <section className="urgency" aria-labelledby="urgency-title">
         <div className="urgency-inner">
-          <span className="urgency-kicker">Mas você precisa agir agora.</span>
-          <h2 id="urgency-title">O tempo não espera. <strong>Sua obra também não deveria.</strong></h2>
-          <p>Adiar o planejamento ou continuar executando sem uma gestão adequada pode aumentar custos, gerar retrabalhos e comprometer prazos.</p>
+          <div className="urgency-copy">
+            <span className="urgency-kicker">Mas você precisa agir agora.</span>
+            <h2 id="urgency-title">O tempo não espera. <strong>Sua obra também não deveria.</strong></h2>
+            <p>Adiar o planejamento ou continuar executando sem uma gestão adequada pode aumentar custos, gerar retrabalhos e comprometer prazos.</p>
+          </div>
+          <div className="urgency-visual" role="img" aria-label="Relógio sobre projetos arquitetônicos, representando a importância do tempo no planejamento da obra">
+            <div className="urgency-visual-label"><span /> TEMPO • PLANEJAMENTO • CONTROLE</div>
+          </div>
         </div>
       </section>
       <section className="details" id="orcamento">
@@ -169,14 +174,17 @@ export default function SolicitarOrcamento() {
         .solution-card h3{font-size:18px;line-height:1.3;margin:18px 0 10px;color:#f8fcff}
         .solution-card p{font-size:13px;line-height:1.55;margin:0;color:#b8cad4}.solution-tagline{font-size:15px;font-weight:600;color:#12c6bf;letter-spacing:.3px;margin:25px 0 0}
         @media(min-width:751px) and (max-width:1000px){.solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:750px){.solution{padding:68px 18px 75px}.solution-grid{grid-template-columns:1fr;gap:14px}.solution-card{min-height:0;padding:25px}.solution-intro{margin-bottom:28px}}
-        .urgency{position:relative;overflow:hidden;background:linear-gradient(120deg,#061526 0%,#0c2a40 58%,#061526 100%);color:#f6fafc;padding:86px 24px 92px;border-top:1px solid rgba(18,198,191,.18)}
-        .urgency:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;background-image:linear-gradient(rgba(18,198,191,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(18,198,191,.09) 1px,transparent 1px);background-size:75px 75px}
-        .urgency-inner{position:relative;max-width:890px;margin:0 auto;text-align:center}
-        .urgency-kicker{display:inline-block;font-size:15px;font-weight:700;letter-spacing:.3px;color:#12c6bf;margin-bottom:22px}
-        .urgency h2{font-size:clamp(30px,4vw,49px);line-height:1.16;font-weight:400;letter-spacing:-1px;margin:0 auto 24px;max-width:810px}
+        .urgency{position:relative;overflow:hidden;background:linear-gradient(125deg,#061526,#0b273b 56%,#061526);color:#f6fafc;padding:68px 24px 74px;border-top:1px solid rgba(18,198,191,.16)}
+        .urgency-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);align-items:center;gap:68px}
+        .urgency-copy{max-width:560px}
+        .urgency-kicker{display:block;font-size:14px;font-weight:700;color:#12c6bf;margin-bottom:17px}
+        .urgency h2{font-size:clamp(30px,3.2vw,43px);line-height:1.18;font-weight:400;letter-spacing:-.8px;margin:0 0 24px}
         .urgency h2 strong{font-weight:750;color:#12c6bf}
-        .urgency p{max-width:670px;margin:0 auto;font-size:16px;line-height:1.75;color:#c1d2db}
-        @media(max-width:750px){.urgency{padding:64px 20px 70px}.urgency-kicker{font-size:13px;margin-bottom:18px}.urgency p{font-size:14px}}
+        .urgency p{font-size:15px;line-height:1.75;color:#c1d2db;margin:0;max-width:510px}
+        .urgency-visual{position:relative;min-height:340px;aspect-ratio:1.34;background:linear-gradient(0deg,rgba(2,17,31,.5),transparent 55%),url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1100&q=85') center/cover no-repeat;border:1px solid rgba(18,198,191,.24);border-radius:36px 6px 36px 6px;box-shadow:0 20px 55px rgba(0,0,0,.25);overflow:hidden}
+        .urgency-visual-label{position:absolute;left:18px;bottom:18px;right:18px;display:flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid rgba(18,198,191,.3);border-radius:10px;background:rgba(4,20,34,.82);backdrop-filter:blur(8px);font-size:10px;font-weight:700;letter-spacing:1px;color:#d7edf0}
+        .urgency-visual-label span{width:7px;height:7px;flex:0 0 7px;border-radius:50%;background:#12c6bf}
+        @media(max-width:800px){.urgency{padding:58px 20px 65px}.urgency-inner{grid-template-columns:1fr;gap:28px}.urgency-copy{max-width:none}.urgency h2{font-size:clamp(29px,7vw,39px)}.urgency p{font-size:14px}.urgency-visual{min-height:260px;max-height:390px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
