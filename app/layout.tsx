@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Evolbim Engenharia | Engenharia, CAD, BIM e Gestão",
+    default: "Evolbim Engenharia",
     template: "%s | Evolbim Engenharia",
   },
 
@@ -60,28 +60,22 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Evolbim Engenharia",
 
-    title: "Evolbim Engenharia | Engenharia, CAD, BIM e Gestão",
-
-    description:
-      "Projetos de engenharia, CAD, BIM, planejamento, orçamento e acompanhamento técnico em Jataí, Goiás.",
+    title: "Evolbim Engenharia",
 
     images: [
       {
         url: "/images/brand/og-evolbim.png",
         width: 1728,
         height: 910,
-        alt: "Evolbim Engenharia - Engenharia, CAD, BIM e Gestão",
+        alt: "Evolbim Engenharia",
       },
     ],
   },
 
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
 
-    title: "Evolbim Engenharia | Engenharia, CAD, BIM e Gestão",
-
-    description:
-      "Projetos de engenharia, CAD, BIM, planejamento, orçamento e acompanhamento técnico em Jataí, Goiás.",
+    title: "Evolbim Engenharia",
 
     images: ["/images/brand/og-evolbim.png"],
   },
@@ -99,10 +93,7 @@ export const metadata: Metadata = {
     },
   },
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-  },
+  // Next.js serves the existing app/favicon.ico automatically.
 
   category: "engineering",
 };
