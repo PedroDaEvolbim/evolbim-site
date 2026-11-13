@@ -145,8 +145,8 @@ export default function SolicitarOrcamento() {
               <p>Sim. Podemos avaliar a situação atual, identificar necessidades técnicas e propor serviços de planejamento, projetos ou acompanhamento adequados à etapa em que sua obra se encontra.</p>
             </details>
             <details className="faq-item">
-              <summary>Como funciona o Método APEX na prática?<span aria-hidden="true">+</span></summary>
-              <p>O Método APEX organiza o trabalho em quatro frentes: Análise, Planejamento, Engenharia e Execução. A aplicação de cada etapa é ajustada ao escopo contratado e às características do empreendimento.</p>
+              <summary>Como sei quais projetos e serviços minha obra precisa?<span aria-hidden="true">+</span></summary>
+              <p>Na conversa inicial, entendemos o tipo de empreendimento, a etapa em que ele se encontra e seus objetivos. Com essas informações, identificamos os projetos e serviços técnicos necessários e apresentamos uma proposta adequada à sua demanda.</p>
             </details>
             <details className="faq-item">
               <summary>Quanto custa contratar os serviços da Evolbim?<span aria-hidden="true">+</span></summary>
