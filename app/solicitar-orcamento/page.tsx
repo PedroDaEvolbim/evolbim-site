@@ -97,6 +97,13 @@ export default function SolicitarOrcamento() {
           <p className="solution-tagline">Engenharia inteligente do início ao resultado.</p>
         </div>
       </section>
+      <section className="urgency" aria-labelledby="urgency-title">
+        <div className="urgency-inner">
+          <span className="urgency-kicker">Mas você precisa agir agora.</span>
+          <h2 id="urgency-title">O tempo não espera. <strong>Sua obra também não deveria.</strong></h2>
+          <p>Adiar o planejamento ou continuar executando sem uma gestão adequada pode aumentar custos, gerar retrabalhos e comprometer prazos.</p>
+        </div>
+      </section>
       <section className="details" id="orcamento">
         <div className="details-inner">
           <p className="eyebrow">EVOLBIM ENGENHARIA</p>
@@ -162,6 +169,14 @@ export default function SolicitarOrcamento() {
         .solution-card h3{font-size:18px;line-height:1.3;margin:18px 0 10px;color:#f8fcff}
         .solution-card p{font-size:13px;line-height:1.55;margin:0;color:#b8cad4}.solution-tagline{font-size:15px;font-weight:600;color:#12c6bf;letter-spacing:.3px;margin:25px 0 0}
         @media(min-width:751px) and (max-width:1000px){.solution-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:750px){.solution{padding:68px 18px 75px}.solution-grid{grid-template-columns:1fr;gap:14px}.solution-card{min-height:0;padding:25px}.solution-intro{margin-bottom:28px}}
+        .urgency{position:relative;overflow:hidden;background:linear-gradient(120deg,#061526 0%,#0c2a40 58%,#061526 100%);color:#f6fafc;padding:86px 24px 92px;border-top:1px solid rgba(18,198,191,.18)}
+        .urgency:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;background-image:linear-gradient(rgba(18,198,191,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(18,198,191,.09) 1px,transparent 1px);background-size:75px 75px}
+        .urgency-inner{position:relative;max-width:890px;margin:0 auto;text-align:center}
+        .urgency-kicker{display:inline-block;font-size:15px;font-weight:700;letter-spacing:.3px;color:#12c6bf;margin-bottom:22px}
+        .urgency h2{font-size:clamp(30px,4vw,49px);line-height:1.16;font-weight:400;letter-spacing:-1px;margin:0 auto 24px;max-width:810px}
+        .urgency h2 strong{font-weight:750;color:#12c6bf}
+        .urgency p{max-width:670px;margin:0 auto;font-size:16px;line-height:1.75;color:#c1d2db}
+        @media(max-width:750px){.urgency{padding:64px 20px 70px}.urgency-kicker{font-size:13px;margin-bottom:18px}.urgency p{font-size:14px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
