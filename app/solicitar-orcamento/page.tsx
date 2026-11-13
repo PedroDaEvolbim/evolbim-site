@@ -319,23 +319,23 @@ export default function SolicitarOrcamento() {
         .limited-spots span{color:#12c6bf;font-size:11px}
         .limited-spots-hero{margin-top:13px}
         .limited-spots-faq{margin-top:13px}
-        .lead-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,7,17,.83);backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:20px}
-        .lead-modal{position:relative;width:min(100%,470px);max-height:calc(100dvh - 32px);overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none;background:linear-gradient(145deg,#09283b,#061526 75%);border:1px solid rgba(18,198,191,.25);box-shadow:0 25px 90px rgba(0,0,0,.5);border-radius:24px;padding:25px 34px 21px;color:white;text-align:center}
-        .lead-modal::-webkit-scrollbar{display:none}
-        .lead-close{position:absolute;top:14px;right:18px;border:0;background:none;color:#12c6bf;font-size:30px;cursor:pointer;line-height:1}
-        .lead-logo{display:block;object-fit:contain;margin:0 auto 7px;width:145px;height:auto}
-        .lead-modal h2{font-size:clamp(23px,3vw,28px);line-height:1.13;font-weight:500;margin:8px 0}
+        .lead-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,7,17,.86);backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
+        .lead-modal{box-sizing:border-box;position:relative;width:min(100%,430px);max-height:calc(100dvh - 24px);overflow:visible;background:linear-gradient(145deg,#09283b,#061526 75%);border:1px solid rgba(18,198,191,.3);box-shadow:0 25px 90px rgba(0,0,0,.5);border-radius:20px;padding:19px 28px 17px;color:white;text-align:center;display:flex;flex-direction:column;align-items:stretch}
+        .lead-close{position:absolute;top:10px;right:13px;border:0;background:none;color:#12c6bf;font-size:28px;cursor:pointer;line-height:1}
+        .lead-logo{display:block;object-fit:contain;margin:0 auto 5px;width:118px;height:52px}
+        .lead-modal h2{font-size:24px;line-height:1.12;font-weight:500;margin:4px 0 8px}
         .lead-modal h2 strong{color:#12c6bf}
-        .lead-description{font-size:14px;line-height:1.6;color:#d1e1e7;margin:0 0 16px}
-        .lead-form{display:grid;gap:7px;text-align:left}
-        .lead-form label{font-size:12px;font-weight:650;color:#d5e7ec}
-        .lead-form input{width:100%;border:1px solid #8ca5b0;border-radius:7px;padding:12px 14px;background:white;color:#082034;font-size:15px;outline:none}
+        .lead-description{font-size:12px;line-height:1.45;color:#d1e1e7;margin:0 0 13px}
+        .lead-form{display:grid;gap:5px;text-align:left}
+        .lead-form label{font-size:11px;font-weight:650;color:#d5e7ec}
+        .lead-form input{box-sizing:border-box;width:100%;border:1px solid #8ca5b0;border-radius:6px;padding:10px 12px;background:white;color:#082034;font-size:14px;outline:none;height:42px}
         .lead-form input:focus{border-color:#12c6bf;box-shadow:0 0 0 3px rgba(18,198,191,.2)}
-        .lead-form button{margin-top:10px;width:100%;border:0;border-radius:7px;background:#12c6bf;color:#06212e;font-size:12px;font-weight:850;padding:14px 13px;cursor:pointer;display:flex;justify-content:center;gap:12px;align-items:center}
+        .lead-form button{margin-top:8px;width:100%;border:0;border-radius:6px;background:#12c6bf;color:#06212e;font-size:11px;font-weight:850;padding:12px 10px;min-height:42px;cursor:pointer;display:flex;justify-content:center;gap:12px;align-items:center}
         .lead-form button:hover{background:#38dfd6}
-        .lead-privacy{font-size:11px;color:#b6d3d8;margin:12px 0 0}
-        .lead-notice{font-size:10px;line-height:1.5;color:#8faab6;margin:6px 0 0}
-        @media(max-width:480px){.lead-modal{padding:24px 22px 20px;border-radius:18px}.lead-logo{width:130px}}
+        .lead-privacy{font-size:10px;color:#b6d3d8;margin:11px 0 0}
+        .lead-notice{font-size:9px;line-height:1.4;color:#8faab6;margin:5px 0 0}
+        @media(max-width:480px){.lead-modal{padding:18px 18px 15px;border-radius:16px}.lead-modal h2{font-size:22px}}
+        @media(max-height:560px){.lead-modal{padding:12px 22px}.lead-logo{height:35px;width:95px}.lead-modal h2{font-size:20px}.lead-description{margin-bottom:8px}.lead-form input{height:36px;padding:7px 10px}.lead-form button{min-height:36px;padding:8px}.lead-privacy{margin-top:7px}.lead-notice{display:none}}
         .site-footer{background:#061526;color:#adc1c4;padding:43px 24px 25px;border-top:1px solid rgba(18,198,191,.19)}
         .footer-inner{max-width:1120px;margin:0 auto}
         .footer-top{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:31px}
