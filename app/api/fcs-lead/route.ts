@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       cache: "no-store",
       signal: AbortSignal.timeout(10000),
     });
-    if (!response.ok) return NextResponse.json({ error: "Não foi possível registrar. Tente novamente." }, { status: 502 });
+    if (!response.ok) {\n      console.error("FCS upstream rejected submission", { status: response.status });\n      return NextResponse.json({ error: "Falha na integração com o OBRYQ", etapa: "obryq", codigo: response.status }, { status: 502 });\n    }
     return NextResponse.json({ ok: true }, { status: 201 });
   } catch {
     return NextResponse.json({ error: "Não foi possível conectar ao FCS. Tente novamente." }, { status: 503 });
