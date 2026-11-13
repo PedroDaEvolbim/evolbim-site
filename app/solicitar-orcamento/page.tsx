@@ -127,6 +127,34 @@ export default function SolicitarOrcamento() {
           </div>
         </div>
       </section>
+      <section className="faq" aria-labelledby="faq-title">
+        <div className="faq-inner">
+          <div className="faq-intro">
+            <span className="faq-kicker">PERGUNTAS MAIS FREQUENTES</span>
+            <h2 id="faq-title">Ainda com <strong>dúvidas?</strong></h2>
+            <a className="faq-cta" href="#orcamento">AGENDE SUA REUNIÃO GRATUITA <span aria-hidden="true">↗</span></a>
+            <p>Converse com a Evolbim e entenda os próximos passos do seu projeto.</p>
+          </div>
+          <div className="faq-items">
+            <details className="faq-item">
+              <summary>Preciso contratar todos os projetos de engenharia de uma vez?<span aria-hidden="true">+</span></summary>
+              <p>Não necessariamente. O escopo pode ser definido conforme as necessidades do empreendimento. Avaliamos quais projetos e etapas são necessários e como integrá-los para evitar incompatibilidades.</p>
+            </details>
+            <details className="faq-item">
+              <summary>Já comecei minha obra. Ainda posso contratar a Evolbim?<span aria-hidden="true">+</span></summary>
+              <p>Sim. Podemos avaliar a situação atual, identificar necessidades técnicas e propor serviços de planejamento, projetos ou acompanhamento adequados à etapa em que sua obra se encontra.</p>
+            </details>
+            <details className="faq-item">
+              <summary>Como funciona o Método APEX na prática?<span aria-hidden="true">+</span></summary>
+              <p>O Método APEX organiza o trabalho em quatro frentes: Análise, Planejamento, Engenharia e Execução. A aplicação de cada etapa é ajustada ao escopo contratado e às características do empreendimento.</p>
+            </details>
+            <details className="faq-item">
+              <summary>Quanto custa contratar os serviços da Evolbim?<span aria-hidden="true">+</span></summary>
+              <p>O investimento depende do tipo de serviço, da área, da complexidade e dos entregáveis necessários. Na conversa inicial, entendemos sua demanda para preparar uma proposta compatível com o escopo.</p>
+            </details>
+          </div>
+        </div>
+      </section>
       <section className="details" id="orcamento">
         <div className="details-inner">
           <p className="eyebrow">EVOLBIM ENGENHARIA</p>
@@ -220,6 +248,24 @@ export default function SolicitarOrcamento() {
         .founder-name{border-top:1px solid #ffffff33;padding-top:18px;display:grid;gap:6px}
         .founder-name strong{font-size:19px}.founder-name span{font-size:12px;color:#c0d3de}
         @media(max-width:800px){.founder{padding:65px 20px}.founder-inner{grid-template-columns:1fr;gap:27px}.founder-visual{min-height:330px}.founder h2{font-size:clamp(29px,7vw,38px)}}
+        .faq{background:#061526;color:#f6fafc;padding:84px 24px 92px;border-top:1px solid rgba(18,198,191,.12)}
+        .faq-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:75px;align-items:start}
+        .faq-kicker{display:inline-block;color:#12c6bf;font-size:11px;letter-spacing:1.6px;font-weight:750;padding-bottom:8px;border-bottom:1px solid #12c6bf}
+        .faq-intro h2{font-size:clamp(32px,3.5vw,45px);font-weight:400;line-height:1.1;margin:22px 0 30px;max-width:320px}
+        .faq-intro h2 strong{display:block;font-weight:750;color:#12c6bf}
+        .faq-cta{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;background:#12c6bf;color:#052233;text-decoration:none;padding:18px 20px;border-radius:16px 3px 16px 3px;font-size:12px;font-weight:800;transition:transform .2s,background .2s}
+        .faq-cta:hover{background:#2eddd4;transform:translateY(-2px)}
+        .faq-cta span{font-size:19px}
+        .faq-intro>p{max-width:290px;font-size:12px;line-height:1.6;color:#a9c2ce;margin:15px 0 0}
+        .faq-items{display:grid;gap:10px}
+        .faq-item{border:1px solid #214259;background:#0a2034;border-radius:17px 4px 17px 4px;overflow:hidden}
+        .faq-item summary{list-style:none;cursor:pointer;padding:21px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:14px;font-weight:700;line-height:1.5;color:#f6fafc}
+        .faq-item summary::-webkit-details-marker{display:none}
+        .faq-item summary span{flex:none;color:#12c6bf;font-size:24px;font-weight:400;line-height:1;transition:transform .2s}
+        .faq-item[open] summary span{transform:rotate(45deg)}
+        .faq-item[open]{border-color:#12c6bf77}
+        .faq-item p{font-size:13px;line-height:1.75;color:#b8cbd6;margin:0;padding:0 22px 22px}
+        @media(max-width:800px){.faq{padding:65px 20px 72px}.faq-inner{grid-template-columns:1fr;gap:35px}.faq-intro h2{margin-bottom:22px}.faq-item summary{padding:18px;font-size:13px}.faq-item p{padding:0 18px 19px}}
         .details{background:#f5f8f8;color:#1c333b;padding:80px 6%}.details-inner{max-width:760px;margin:auto;text-align:center}
         .eyebrow{color:#008e8a;letter-spacing:3px;font-size:12px;font-weight:bold}
         h2{font-size:clamp(30px,4vw,48px);line-height:1.15;margin:16px 0}.details p:not(.eyebrow){font-size:18px;line-height:1.6;margin-bottom:30px}
